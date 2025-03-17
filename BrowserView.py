@@ -1,3 +1,4 @@
+#  For automatic login of Zerodha in Browser without entering details everytime or to update ENC token used for further to run strategy
 import pyotp
 from time import sleep
 from selenium import webdriver
@@ -5,7 +6,8 @@ from configparser import ConfigParser
 from selenium.webdriver.common.by import By
 
 config_object = ConfigParser()
-config_object.read("D:\project\work\kite_login\config.ini")
+# you have to add your file path where config.py exist
+config_object.read("config.ini") 
 userinfo = config_object["USERINFO"]
 
 driver = webdriver.Chrome()
