@@ -1,4 +1,4 @@
-#  For automatic login of Zerodha in Browser without entering details everytime or to update ENC token used for further to run strategy
+#  For automatic login of Zerodha in Browser without entering details everytime
 import pyotp
 from time import sleep
 from selenium import webdriver
