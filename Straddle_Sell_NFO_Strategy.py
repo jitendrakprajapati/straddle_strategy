@@ -181,8 +181,6 @@ def create_straddle():
     print(orderID_ce)
     print("TRUE")
     print(orderID_pe)
-    # orderID_pe = "240829200450227"
-    # orderID_ce = "240829200449638"
 
     # Convert order book data to a DataFrame
     df_orders = pd.DataFrame(order_book["data"])
