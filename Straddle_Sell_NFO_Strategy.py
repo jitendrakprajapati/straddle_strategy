@@ -14,12 +14,13 @@ import csv, json
 time_now = dt.now()
 day_min = time_now.hour * 100 + time_now.minute
 
+# time in between strategy can run
 assert (time_now.hour * 100 + time_now.minute > 914) and (
     time_now.hour * 100 + time_now.minute < 1530
 )
 
 
-def login_kite():
+def login_kite():   #generate encryption token
     kite = pykite()  # kite instance creation
     config = configparser.ConfigParser()
     config.read("config.ini")
@@ -29,7 +30,7 @@ def login_kite():
 
 def strike_price_stock():
     enc_token = login_kite()
-    kite = kt.KiteApp("self", "UZ2906", enc_token)
+    kite = kt.KiteApp("self", "your_zerodha_user_id", enc_token)
     kws = kite.kws()
     stock = {260105: "BANKNIFTY"}
 
